@@ -9,7 +9,15 @@
             </a>
             @include('issues.issue.deadline')
             <div class="row">
-                <div class="col-md-offset-6 col-md-6">
+                <div class="col-md-6">
+                    <div class="btn-group">
+{{--                        <img src="{{{ Identicon::getImageDataUri($issue->user->name) }}}" alt="{{{ $issue->user->name }}}" />--}}
+                        <img src="{{{ Identicon::getImageResource($issue->user->name) }}}" alt="{{{ $issue->user->name }}}" />
+                        {!! Identicon::getImageResource($issue->user->name) !!}
+                        <img src="data:image/svg+xml;base64,{!! base64_encode(Identicon::getImageResource($issue->user->name)) !!}" />
+                    </div>
+                </div>
+                <div class="col-md-6">
                     <div class="btn-group pull-right">
                         <span class="issue-type {{App\IssueType::findOrFail($issue->type_id)->machine_name}}">
                             {{App\IssueType::findOrFail($issue->type_id)->label}}

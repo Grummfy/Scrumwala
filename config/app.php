@@ -194,7 +194,11 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
-        'Html'      => 'Illuminate\Html\HtmlFacade'
+        'Html'      => 'Illuminate\Html\HtmlFacade',
+
+		'Identicon' => 'App\Facades\Identicon',
 	],
+	
+	'timezone'	=> 'Europe/Brussels',
 
 ];

@@ -86,7 +86,7 @@ class Utils {
         if($statusId)
         {
             return Issue::where('sprint_id', '=', $sprintId)
-            ->where('status_id', '=', $statusId)->get();
+            ->where('status_id', '=', $statusId)->with('user')->get();
         }
         else {
             return false;
